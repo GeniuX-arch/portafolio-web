@@ -1,101 +1,75 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+  <!-- Navbar -->
   <nav>
     <a href="#">home</a>
     <a href="#">about me</a>
-    <a href="#">tecnologies</a>
-    <a href="#">experiencias</a>
+    <a href="#">technologies</a>
+    <a href="#">experiences</a>
   </nav>
-  <main class="flex flex-col-reverse sm:flex-row h-96 -slate-100">
-    <div
-      class="flex items-center justify-center text-center sm:justify-normal sm:text-start sm:w-3/5"
-    >
-      <div class="">
+
+  <!-- Main -->
+  <main class="flex flex-col-reverse sm:flex-row h-auto -slate-100">
+    <div class="flex items-center justify-center text-center sm:justify-normal sm:text-start sm:w-3/5">
+      <div>
         <p>hello! I'm</p>
         <h1 class="text-5xl">Jhoan Jimenez</h1>
         <p class="text-2xl text-yellow-500">Full Stack Developer</p>
         <p>texto de ejemplo</p>
-        <div
-          class="flex flex-row items-center justify-center sm:items-start sm:justify-normal"
-        >
-          <a
-            href="#"
-            class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg"
-            >CV</a
-          >
-          <a
-            href="#"
-            class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg"
-            >CV</a
-          >
-          <div
-            class="m-4 border rounded-lg h-11 text-center flex flex-row items-center justify-center"
-          >
-            <img
-              src="../../public/email.svg"
-              alt=""
-              width="30px"
-              class="mr-4 hover:rotate-6 transition duration-150"
-            />
-            <p class="">geniuh7@gmail.com</p>
-            <button class="bg-yellow-400 h-full rounded-lg">copiar</button>
-            <a href="#" class="bg-yellow-400 h-full rounded-lg text-center "
-              >Enviar</a
-            >
-            <button class="bg-yellow-400 h-full rounded-lg">copiar</button>
-          </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
+          <a href="#" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg">
+            CV
+          </a>
+          <a href="#" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
+            CV
+          </a>
+
+          <!-- Email -->
+         
         </div>
-        <div
-          class="flex flex-row items-center justify-center sm:items-start sm:justify-normal"
-        >
-          <a
-            href="#"
-            class="mr-4 my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center"
-            ><img
-              src="../../public/github.svg"
-              alt=""
-              width="30px"
-              class="m-2 hover:rotate-6 transition duration-150"
-            />
-            <p>GitHub</p></a
-          >
-          <a
-            href="#"
-            class="my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center"
-            ><img
-              src="../../public/linkedin.svg"
-              alt=""
-              width="30px"
-              class="m-2 hover:rotate-6 transition duration-150"
-            />
-            <p>Linkedin</p></a
-          >
-        </div>
+
+        <!-- Contact -->
+        <ul class="flex flex-row items-center justify-center sm:items-start sm:justify-normal flex-wrap">
+          <a href="#">
+            <Icons name="Linkerdin" link="../../public/linkedin.svg" hover=""/>
+          </a>
+          <a href="#">
+            <Icons name="GitHub" link="../../public/github.svg" hover="" />
+          </a>
+          <a href="">
+            <Icons name="geniuh7@gmail.com" link="../../public/email.svg" hover="Copiar"/>
+          </a>
+        </ul>
       </div>
     </div>
-    <div class="sm:w-2/5 w-full h-10 bg-purple-100"></div>
+
+    <div class=" sm:w-2/5 w-full flex justify-center  aspect-square sm:aspect-auto ">
+        <img src="../../media/imagen3.png" class="w-max sm:rounded-none rounded-full sm:lnone">
+    </div>
   </main>
-  
 
-
+  <!-- About Me -->
   <section class="text-center">
     <h1>About Me</h1>
     <div class="flex flex-row mt-12">
-    <div class="w-1/2">
-      <p>Soy una persona carismatica que se toma las cosas enserio</p>
-    </div>
-    <div class="flex flex-row flex-wrap h-12 w-1/2 bg-white">
-      <div class="flex flex-col w-2/12 bg-black m-3">
-        <img src="" alt="">
-        <p></p>
+      <div class="w-1/2">
+        <p>Soy una persona carismatica que se toma las cosas enserio</p>
+      </div>
+      <div class="flex flex-row flex-wrap h-12 w-1/2 bg-white">
+        <div class="flex flex-col w-2/12 bg-black m-3">
+          <p></p>
+        </div>
       </div>
     </div>
-    </div>
-  </section> 
+  </section>
 
+  <!-- Technologies -->
   <section class="text-center mt-12">
     <h1>Tecnologias</h1>
     <div class="flex flex-col mt-12">
@@ -104,9 +78,7 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <img src="" alt="">
         </div>
-
       </div>
     </div>
   </section>
 </Layout>
-
