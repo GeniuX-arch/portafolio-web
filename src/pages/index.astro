@@ -1,19 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
+import Link from "../components/link.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <!-- Navbar -->
-  <nav>
-    <a href="#">home</a>
-    <a href="#">about me</a>
-    <a href="#">technologies</a>
-    <a href="#">experiences</a>
+  <nav class="flex justify-center h-14 items-center fixed">
+    <Link name="home" link="#" />
+    <Link name="about me" link="#" />
+    <Link name="technologies" link="#" />
+    <Link name="experiences" link="#" />
   </nav>
 
   <!-- Main -->
-  <main class="flex flex-col-reverse sm:flex-row h-auto -slate-100">
+  <main class="flex min-h-screen flex-col-reverse sm:flex-row h-auto -slate-100">
     <div class="flex items-center justify-center text-center sm:justify-normal sm:text-start sm:w-3/5">
       <div>
         <p>hello! I'm</p>
@@ -42,23 +43,27 @@ import Icons from "../components/Icons.astro";
           <a href="#">
             <Icons name="GitHub" link="../../public/github.svg" hover="" />
           </a>
-          <a href="">
+          <a href="#">
             <Icons name="geniuh7@gmail.com" link="../../public/email.svg" hover="Copiar"/>
           </a>
         </ul>
       </div>
     </div>
 
-    <div class=" sm:w-2/5 w-full flex justify-center  aspect-square sm:aspect-auto ">
-        <img src="../../media/imagen3.png" class="w-max sm:rounded-none rounded-full sm:lnone">
+    <div class=" sm:w-2/5 w-full bg-slate-950 flex justify-center  aspect-square sm:aspect-auto ">
+        <img src="" class="w-max sm:rounded-none rounded-full sm:lnone">
+
     </div>
   </main>
 
+
+
+
   <!-- About Me -->
-  <section class="text-center">
-    <h1>About Me</h1>
-    <div class="flex flex-row mt-12">
-      <div class="w-1/2">
+   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
+    <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
+    <div class="flex flex-col mt-12">
+       <div class="w-1/2">
         <p>Soy una persona carismatica que se toma las cosas enserio</p>
       </div>
       <div class="flex flex-row flex-wrap h-12 w-1/2 bg-white">
@@ -70,15 +75,54 @@ import Icons from "../components/Icons.astro";
   </section>
 
   <!-- Technologies -->
-  <section class="text-center mt-12">
-    <h1>Tecnologias</h1>
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center ">
+    <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
     <div class="flex flex-col mt-12">
-      <div class="flex flex-row">
-        <h2>FrontEnd</h2>
-        <div>
-          <img src="" alt="">
-        </div>
+      <div class="flex flex-row items-center mt-10">
+        <h2 class="w-3/12">FrontEnd</h2>
+          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
+            <Icons hover="JavaScript" link="../public/Tecnologies/javascript.svg" name="" />
+            <Icons hover="TypeScript" link="../public/Tecnologies/typescript.svg" name="" />
+            <Icons hover="Astro" link="../public/Tecnologies/Astro.dark.svg" name="" />
+            <Icons hover="React" link="../public/Tecnologies/react.svg" name="" />
+            <Icons hover="Tailwind CSS" link="../public/Tecnologies/tailwindcss.svg" name="" />
+          </ul>
+      </div>
+      <div class="flex flex-row items-center mt-10 ">
+        <h2 class="w-3/12">BackEnd</h2>
+          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
+            <Icons hover="" link="../public/Tecnologies/Express.js.dark.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/nodejs.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/java.svg" name="" />
+          </ul>
+      </div>
+      <div class="flex flex-row items-center mt-10">
+        <h2 class="w-3/12">Databases</h2>
+          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
+            <Icons hover="" link="../public/Tecnologies/mysql.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/mongodb.svg" name="" />
+          </ul>
+      </div>
+      <div class="flex flex-row items-center mt-10">
+        <h2 class="w-3/12">other Tecnologies</h2>
+          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
+            <Icons hover="" link="../public/Tecnologies/docker.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/aws.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/git.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/github.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/postman.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/vitejs.svg" name="" />
+            <Icons hover="" link="../public/Tecnologies/photoshop.svg" name="" />
+          </ul>
       </div>
     </div>
+  </section>
+
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center">
+    <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
+    <div class="flex flex-col mt-12">
+
+    </div>
+
   </section>
 </Layout>

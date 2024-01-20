@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  link: string;
+}
+
+const { name, link } = Astro.props;
+---
+
+
+<div class="mx-10 hover:text-purple-500 transition duration-150">
+    <a href={link}>{name}</a>
+</div>

@@ -9,8 +9,8 @@ const { name, link, hover } = Astro.props;
 ---
 
 <li>
-  <div class="mr-4 my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center " title={hover}>
-    <img src={link} alt="" width="30px"  class="m-2 hover:rotate-6 transition duration-150"/>
+  <div class="mr-4 my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center h-10" title={hover}>
+    <img src={link} alt="" width="30px"  class="m-2 hover:rotate-6 transition duration-150 h-full"/>
     <p>{name}</p>
   </div>
 </li>
