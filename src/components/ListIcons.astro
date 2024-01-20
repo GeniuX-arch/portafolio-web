@@ -1,0 +1,17 @@
+---
+import Icons from "./Icons.astro"
+interface Props {
+  list: string[];
+}
+
+const { list } = Astro.props;
+---
+
+
+    <ul class="flex flex-row justify-center w-10/12 flex-wrap">
+        {
+        list.map((name)=>
+            <Icons hover="" link=`../public/Tecnologies/${name}.svg` name="" />
+        )
+        }
+    </ul>

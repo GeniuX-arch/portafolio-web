@@ -2,11 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/link.astro";
+import ListIcons from "../components/ListIcons.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portafolio">
   <!-- Navbar -->
-  <nav class="flex justify-center h-14 items-center fixed">
+  <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md">
     <Link name="home" link="#" />
     <Link name="about me" link="#" />
     <Link name="technologies" link="#" />
@@ -25,10 +26,10 @@ import Link from "../components/link.astro";
         <!-- Buttons -->
         <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
           <a href="#" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg">
-            CV
+            CV (Español)
           </a>
           <a href="#" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
-            CV
+            CV (English)
           </a>
 
           <!-- Email -->
@@ -61,8 +62,8 @@ import Link from "../components/link.astro";
 
   <!-- About Me -->
    <section class="text-center my-20 min-h-screen flex flex-col justify-center">
-    <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
-    <div class="flex flex-col mt-12">
+    <h1 class="text-2xl text-yellow-500">About me</h1>
+    <div class="flex flex-row mt-12">
        <div class="w-1/2">
         <p>Soy una persona carismatica que se toma las cosas enserio</p>
       </div>
@@ -78,51 +79,41 @@ import Link from "../components/link.astro";
   <section class="text-center my-20 min-h-screen flex flex-col justify-center ">
     <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
     <div class="flex flex-col mt-12">
+
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">FrontEnd</h2>
-          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
-            <Icons hover="JavaScript" link="../public/Tecnologies/javascript.svg" name="" />
-            <Icons hover="TypeScript" link="../public/Tecnologies/typescript.svg" name="" />
-            <Icons hover="Astro" link="../public/Tecnologies/Astro.dark.svg" name="" />
-            <Icons hover="React" link="../public/Tecnologies/react.svg" name="" />
-            <Icons hover="Tailwind CSS" link="../public/Tecnologies/tailwindcss.svg" name="" />
-          </ul>
+        <ListIcons list={["javascript","typescript","Astro.dark","react","tailwindcss"]} />
       </div>
+
+
       <div class="flex flex-row items-center mt-10 ">
         <h2 class="w-3/12">BackEnd</h2>
-          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
-            <Icons hover="" link="../public/Tecnologies/Express.js.dark.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/nodejs.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/java.svg" name="" />
-          </ul>
+            <ListIcons list={["Express.js.dark","nodejs","java"]} />
       </div>
+
+
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">Databases</h2>
-          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
-            <Icons hover="" link="../public/Tecnologies/mysql.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/mongodb.svg" name="" />
-          </ul>
+            <ListIcons list={["mysql","mongodb"]} />
       </div>
+
+
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">other Tecnologies</h2>
-          <ul class="flex flex-row justify-center w-10/12 flex-wrap">
-            <Icons hover="" link="../public/Tecnologies/docker.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/aws.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/git.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/github.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/postman.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/vitejs.svg" name="" />
-            <Icons hover="" link="../public/Tecnologies/photoshop.svg" name="" />
-          </ul>
+            <ListIcons list={["docker","aws","git","github","postman","vitejs","photoshop","linux"]} />
       </div>
+
     </div>
   </section>
 
   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
-    <h1 class="text-2xl text-yellow-500">Tecnologies</h1>
+    <h1 class="text-2xl text-yellow-500">Proyectos</h1>
     <div class="flex flex-col mt-12">
-
     </div>
-
+  </section>
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center">
+    <h1 class="text-2xl text-yellow-500">Experiencia</h1>
+    <div class="flex flex-col mt-12">
+    </div>
   </section>
 </Layout>
