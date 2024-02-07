@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/link.astro";
+
 import ListIcons from "../components/ListIcons.astro";
+import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Portafolio">
   <!-- Navbar -->
-  <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md">
+  <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md w-full">
     <Link name="home" link="#" />
     <Link name="about me" link="#" />
     <Link name="technologies" link="#" />
@@ -106,6 +108,7 @@ import ListIcons from "../components/ListIcons.astro";
     </div>
   </section>
 
+  <!-- PROYECTOS -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
     <h1 class="text-2xl text-yellow-500">Proyectos</h1>
     <div class="flex flex-col mt-12">
@@ -117,3 +120,4 @@ import ListIcons from "../components/ListIcons.astro";
     </div>
   </section>
 </Layout>
+

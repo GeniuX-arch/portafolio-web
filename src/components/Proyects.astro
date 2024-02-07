@@ -1,18 +1,33 @@
 ---
 import Link from "./link.astro"
+import Icons from "./Icons.astro"
+import ListIcons from "./ListIcons.astro"
+interface Props{
+    titulo:string;
+    img:string;
+    des:string;
+    tecnologias:string[];
+    extra:string;
+    
+}
+const {titulo, img, des, tecnologias, extra} = Astro.props;
 ---
 
-<div>
-    <div>
-
+<div class="w-1/3 flex flex-row">
+    <div class="w-full">
+        <p>{titulo}</p>
     </div>
-    <div>
-
+    <div class="w-full h-30 bg-white">
+        <img src={img} alt="">
     </div>
-    <div>
-        <p>{}</p>
-
-        
-
+    <div class="w-full">
+        <p>{des}</p>
+        <ul>
+            <a href={extra} >
+                <Icons name="Github" link=`../../public/github.svg` hover=""/>
+            </a>
+        </ul>
+        <p>tecnologias utilizadas</p>
+        <ListIcons list={tecnologias} />
     </div>
 </div>
