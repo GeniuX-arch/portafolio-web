@@ -13,13 +13,15 @@ interface Props{
 const {titulo, img, des, tecnologias, extra} = Astro.props;
 ---
 
-<div class="w-1/3 flex flex-row">
-    <div class="w-full">
+<!-- proyectos -->
+<div class="xl:w-1/3 w-full flex flex-col justify-center items-center rounded-xl bg-slate-800 m-16">
+    <div class="w-full m-2 text-2xl">
         <p>{titulo}</p>
     </div>
-    <div class="w-full h-30 bg-white">
+    <div class="w-full h-64 bg-white">
         <img src={img} alt="">
     </div>
+    <ListIcons list={tecnologias} />
     <div class="w-full">
         <p>{des}</p>
         <ul>
@@ -27,7 +29,5 @@ const {titulo, img, des, tecnologias, extra} = Astro.props;
                 <Icons name="Github" link=`../../public/github.svg` hover=""/>
             </a>
         </ul>
-        <p>tecnologias utilizadas</p>
-        <ListIcons list={tecnologias} />
     </div>
 </div>
