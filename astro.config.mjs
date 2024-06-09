@@ -5,5 +5,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
     site: 'https://GeniuX-arch.github.io',
     base: 'portafolioweb',
+    buildOptions: {
+        site: 'https://geniux-arch.github.io/',
+        outDir: 'dist',
+      },
     integrations: [tailwind()],
 });
