@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    base:'https://GeniuX-arch.github.io/portafolioweb',
+    site: 'https://GeniuX-arch.github.io',
+    base: 'portafolioweb',
     integrations: [tailwind()],
 });
