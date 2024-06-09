@@ -18,15 +18,15 @@ const {titulo, img, des, tecnologias, extra} = Astro.props;
     <div class="w-full m-2 text-2xl">
         <p>{titulo}</p>
     </div>
-    <div class="w-full h-64 bg-white">
-        <img src={img} alt="">
+    <div class="w-full max-h-96 -white">
+        <img src={'../../media/'+img} alt="">
     </div>
-    <ListIcons list={tecnologias} />
+        <ListIcons list={tecnologias} width={"20"}/>
     <div class="w-full">
         <p>{des}</p>
         <ul>
             <a href={extra} >
-                <Icons name="Github" link=`../../public/github.svg` hover=""/>
+                <Icons name="Ver codigo" link=`../../public/github.svg` hover="" witdth={"20"}/>
             </a>
         </ul>
     </div>

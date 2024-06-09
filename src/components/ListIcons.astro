@@ -2,16 +2,17 @@
 import Icons from "./Icons.astro"
 interface Props {
   list: string[];
+  width: String;
 }
 
-const { list } = Astro.props;
+const { list,width } = Astro.props;
 ---
 
 
     <ul class="flex flex-row justify-center w-10/12 flex-wrap">
         {
         list.map((name)=>
-            <Icons hover="" link=`../../public/tecnologies/${name}.svg` name="" />
+            <Icons hover="" link=`../../public/tecnologies/${name}.svg` name="" witdth={width}/>
         )
         }
     </ul>

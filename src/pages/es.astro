@@ -1,3 +1,4 @@
+
 ---
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
@@ -8,107 +9,103 @@ import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Portafolio">
-  <!-- Navbar -->
+  <!-- Barra de navegación -->
   <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md left-0 w-full">
-    <Link name="home" link="#" />
-    <Link name="About me" link="#" />
-    <Link name="Technologies" link="#" />
-    <Link name="Experiences" link="#" />
-    <Link name="En" link="/en" />
+    <Link name="Inicio" link="#" />
+    <Link name="Sobre mí" link="#" />
+    <Link name="Tecnologías" link="#" />
+    <Link name="Experiencias" link="#" />
+    <Link name="Es" link="/es" />
   </nav>
 
-  <!-- Main -->
-  <main class="flex min-h-screen flex-col-reverse sm:flex-row h-auto -slate-100">
-    <div class="flex items-center justify-center text-center sm:justify-normal sm:text-start sm:w-3/5">
-      <div>
-        <p>hello! I'm</p>
-        <h1 class="text-5xl">Jhoan Jimenez</h1>
-        <p class="text-2xl text-yellow-500">Full Stack Developer</p>
-        <p>texto de ejemplo</p>
+  <!-- Principal -->
+  <main class="flex justify-center items-center flex-col min-h-screen -slate-100 ">
+    
+  <!-- Imagen -->
+    <div class="  w-full flex justify-center items-center spect-square ">
+        <img src="../../media/img.png" class="w-1/4  rounded-full">
 
-        <!-- Buttons -->
+    </div>
+    <div class="flex flex-col items-center justify-center text-center pt-10  w-full ">
+        <p>¡Hola! Soy</p>
+        <h1 class="text-5xl">Jhoan Jimenez</h1>
+        <p class="text-2xl text-yellow-500">Desarrollador Full Stack</p>
+        <p>¿Cómo puedo ayudarte?</p>
+
+        <!-- Botones -->
         <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
           <a href="#" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg">
             CV (Español)
           </a>
           <a href="#" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
-            CV (English)
+            CV (Inglés)
           </a>
 
           <!-- Email -->
          
         </div>
 
-        <!-- Contact -->
-        <ul class="flex flex-row items-center justify-center sm:items-start sm:justify-normal flex-wrap">
-          <a href="#">
-            <Icons name="Linkerdin" link="../../public/linkedin.svg" hover=""/>
+        <!-- Contacto -->
+        <ul class="flex flex-row items-center justify-center w-full flex-wrap ">
+          <a href="https://www.linkedin.com/in/jhoanjimenez">
+            <Icons name="LinkedIn" link="../../public/linkedin.svg" hover="" witdth={"30"}/>
+          </a>
+          <a href="https://github.com/GeniuX-arch">
+            <Icons name="GitHub" link="../../public/github.svg" hover=""witdth={"30"} />
           </a>
           <a href="#">
-            <Icons name="GitHub" link="../../public/github.svg" hover="" />
-          </a>
-          <a href="#">
-            <Icons name="geniuh7@gmail.com" link="../../public/email.svg" hover="Copiar"/>
+            <Icons name="geniuh7@gmail.com" link="../../public/email.svg" hover="Copiar" witdth={"30"}/>
           </a>
         </ul>
-      </div>
     </div>
 
-    <div class=" sm:w-2/5 w-full bg-slate-950 flex justify-center  aspect-square sm:aspect-auto ">
-        <img src="" class="w-max sm:rounded-none rounded-full sm:lnone">
-
-    </div>
+  
   </main>
 
 
 
 
-  <!-- About Me -->
+  <!-- Sobre Mí -->
    <section class="text-center my-20 min-h-screen flex flex-col justify-center">
-    <h1 class="text-2xl text-yellow-500">About me</h1>
+    <h1 class="text-2xl text-yellow-500">Sobre mí</h1>
     <div class="flex flex-row mt-12">
        <div class="w-1/2">
-        <p>It's a pleasure to greet you. My name is Jhoan, and I'm delighted to introduce myself as a web developer with a strong experience in creating innovative digital solutions. I'm passionate about the world of technology and committed to delivering exceptional online experiences through careful web design and development.
-
-Throughout my career, I've gained technical skills in languages of great importance in today's landscape. My focus extends beyond functionality to usability and aesthetic design, always striving to provide intuitive and engaging interfaces.
-
-
-In summary, my goal is to contribute to project success by applying my technical skills and my passion for creating outstanding web experiences. I'm excited about the opportunity to collaborate on your future projects and contribute to the ongoing growth and success of your company.</p>
+        <p>Desde muy joven, me ha encantado programar, gracias a lo cual he aprendido muchas cosas que podrían ser de gran utilidad para ti.</p>
       </div>
       <div class="flex flex-row flex-wrap h-12 w-1/2 ">
         <div class="flex flex-col w-2/12  m-3">
-          <ListIcons list={["linux"]} />
+          <ListIcons list={["linux"]} width={"30"}/>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technologies -->
+  <!-- Tecnologías -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center ">
-    <h1 class="text-2xl text-yellow-500">Tecnologies I'm know</h1>
+    <h1 class="text-4xl text-yellow-500">Tecnologías que conozco</h1>
     <div class="flex flex-col mt-12">
 
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">FrontEnd</h2>
-        <ListIcons list={["javascript","typescript","Astro.dark","react","tailwindcss"]} />
+        <ListIcons list={["javascript","typescript","Astro.dark","react","tailwindcss"]} width={"30"}/>
       </div>
 
 
       <div class="flex flex-row items-center mt-10 ">
         <h2 class="w-3/12">BackEnd</h2>
-            <ListIcons list={["Express.js.dark","nodejs","java"]} />
+            <ListIcons list={["Express.js.dark","nodejs","java"]}width={"30"} />
       </div>
 
 
       <div class="flex flex-row items-center mt-10">
-        <h2 class="w-3/12">Databases</h2>
-            <ListIcons list={["mysql","mongodb"]} />
+        <h2 class="w-3/12">Bases de Datos</h2>
+            <ListIcons list={["mysql","mongodb"]}width={"30"} />
       </div>
 
 
       <div class="flex flex-row items-center mt-10">
-        <h2 class="w-3/12">other Tecnologies</h2>
-            <ListIcons list={["docker","aws","git","github","postman","vitejs","photoshop","linux"]} />
+        <h2 class="w-3/12">Otras Tecnologías</h2>
+            <ListIcons list={["docker","aws","git","github","postman","vitejs","photoshop","linux"]} width={"30"}/>
       </div>
 
     </div>
@@ -117,20 +114,15 @@ In summary, my goal is to contribute to project success by applying my technical
   <!-- PROYECTOS -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
     <h1 class="text-2xl text-yellow-500">Proyectos</h1>
-    <div class="flex flex-row justify-between flex-wrap">
-      <Proyects titulo="hola", img="a", tecnologias={["git", "github", "postman", "vitejs", "mysql"]}, des="holaaa" extra="gi" />
-      <Proyects titulo="hola", img="a", tecnologias={["git", "github", "postman", "vitejs", "mysql"]}, des="holaaa" extra="gi" />
-      <Proyects titulo="hola", img="a", tecnologias={["git", "github", "postman", "vitejs", "mysql"]}, des="holaaa" extra="gi" />
-      <Proyects titulo="hola", img="a", tecnologias={["git", "github", "postman", "vitejs", "mysql"]}, des="holaaa" extra="gi" />
-      <Proyects titulo="hola", img="a", tecnologias={["git", "github", "postman", "vitejs", "mysql"]}, des="holaaa" extra="gi" />
+    <div class="grid-cols-2 grid gap-2 my-10">
+      <Proyects titulo="Administración de horarios frontend" img="proyecto1.png" tecnologias={["git", "github", "react","vitejs", "tailwindcss", "typescript" ]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
+      <Proyects titulo="Administración de horarios backend" img="proyecto2.png" tecnologias={["git", "github","nodejs", "Express.js.dark", "postman", "mysql", "typescript"]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
+      <Proyects titulo="Administración de Tareas frontend" img="proyecto3.png" tecnologias={["git", "github", "React", "vitejs","tailwindcss","javascript"]} des="Página para Organizarse con las tareas del día a día" extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />
+      <Proyects titulo="Crud con PHP" img="proyecto4.png" tecnologias={["git", "github", "php", "tailwindcss", "mysql"]} des="Crud: Crear, Leer, Actualizar y Eliminar de una base de datos, Tiene validación de campos y redirecciones" extra="https://github.com/GeniuX-arch/crud-php" />
     </div>
-    <div class="flex flex-col mt-12">
-    </div>
-  </section>
-  <section class="text-center my-20 min-h-screen flex flex-col justify-center">
-    <h1 class="text-2xl text-yellow-500">Experiencia</h1>
-    <div class="flex flex-col mt-12">
-    </div>
-  </section>
+    <p>Te invito a mi repositorio de github para que puedas ver muchos más:</p> 
+          <a href="https://github.com/GeniuX-arch">
+            <Icons name="Ver repositorio de GitHub" link="../../public/github.svg" hover=""witdth={"30"} />
+          </a>
+    
 </Layout>
-
