@@ -24,13 +24,14 @@ import Proyects from "../components/Proyects.astro";
   </nav>
 
   <!-- Main -->
-  <main class="flex justify-center items-center flex-col min-h-screen -slate-100 ">
+  <main class="flex justify-center pt-16 items-center flex-col min-h-screen -slate-100 ">
     
   <!--imagen -->
-    <div class="w-full flex justify-center items-center aspect-square">
-        <Image src={img} alt="Foto" class="rounded-full w-1/4"  />
-      </div>
-    <div class="flex flex-col items-center justify-center text-center pt-10 w-full">
+    <div class="w-full h-80 flex justify-center items-center aspect-square bg-hite">
+        <Image src={img} alt="Foto" class="rounded-full sm:w-1/4 w-2/3 "  />
+
+     </div>
+    <div class="flex flex-col items-center justify-center text-center  w-full">
         <p>hello! I'm</p>
         <h1 class="text-5xl">Jhoan Jimenez</h1>
         <p class="text-2xl text-yellow-500">Full Stack Developer</p>
@@ -111,7 +112,7 @@ import Proyects from "../components/Proyects.astro";
   <!-- PROYECTOS -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
     <h1 class="text-2xl text-yellow-500">Proyectos</h1>
-    <div class="grid-cols-2 grid gap-2 my-10">
+    <div class="lg:grid-cols-2 grid gap-2 my-10 grid-cols-1">
       <Proyects titulo="Administración de horarios frontend" img={proyecto1} tecnologias={[git, github, react, vite, tailwindcss, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
 <Proyects titulo="Administración de horarios backend" img={proyecto2} tecnologias={[git, github, nodejs, Express, postman, mysql, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
 <Proyects titulo="Administración de Tareas frontend" img={proyecto3} tecnologias={[git, github, react, vite, tailwindcss, javascript]} des="Pagina para Organizarse con las tareas del día a día" extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />

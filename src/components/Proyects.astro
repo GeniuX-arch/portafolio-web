@@ -22,7 +22,7 @@ const {titulo, img, des, tecnologias, extra} = Astro.props;
     <div class="w-full m-2 text-2xl">
         <p>{titulo}</p>
     </div>
-    <div class="w-full max-h-96 -white">
+    <div class="w-full h-auto -white">
         <Image src={img} alt="">
     </div>
         <ListIcons list={tecnologias} width={20}/>
