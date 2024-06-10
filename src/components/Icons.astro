@@ -1,17 +1,18 @@
 ---
+import { Image } from 'astro:assets';
 interface Props {
   hover: string;
   name: string;
-  link: string;
-  witdth:String;
+  link: ImageMetadata;
+  width:number;
 }
 
-const { name, link, hover, witdth } = Astro.props;
+const { name, link, hover, width } = Astro.props;
 ---
 
 <li>
   <div class="group mr-4 my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center h-10" title={hover}>
-    <img src={link} alt="" width=`${witdth}px`  class="m-2  group-hover:rotate-6 transition duration-150 h-full"/>
+    <Image src={link} alt="iconos"  class="m-2  group-hover:rotate-6 transition duration-150 h-full" width={width} />
     <p>{name}</p>
   </div>
 </li>

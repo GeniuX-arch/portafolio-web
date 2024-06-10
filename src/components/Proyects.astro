@@ -3,11 +3,14 @@ import Link from "./link.astro"
 import Icons from "./Icons.astro"
 import ListIcons from "./ListIcons.astro"
 import linkedin from "../../public/linkedin.svg"
+import { github } from "../assets/lista"
+import { Image } from "astro:assets"
+
 interface Props{
     titulo:string;
-    img:string;
+    img:ImageMetadata;
     des:string;
-    tecnologias:string[];
+    tecnologias:ImageMetadata[];
     extra:string;
     
 }
@@ -20,14 +23,14 @@ const {titulo, img, des, tecnologias, extra} = Astro.props;
         <p>{titulo}</p>
     </div>
     <div class="w-full max-h-96 -white">
-        <img src={'../../media/'+img} alt="">
+        <Image src={img} alt="">
     </div>
-        <ListIcons list={tecnologias} width={"20"}/>
+        <ListIcons list={tecnologias} width={20}/>
     <div class="w-full">
         <p>{des}</p>
         <ul>
             <a href={extra} >
-                <Icons name="Ver codigo" link=`../../public/github.svg` hover="" witdth={"20"}/>
+                <Icons name="Ver codigo" link={github} hover="" width={20}/>
             </a>
         </ul>
     </div>
