@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/link.astro";
-import cves from "../assets/cv/cv-es.pdf";
-import cven from "../assets/cv/cv-en.pdf";
 import { Image } from 'astro:assets';
 import { javascript,typescript,java,php,astro,react,tailwindcss,Express,
   nodejs,prisma,laravel,mysql,mongodb, docker,aws,git,github,postman,vite,photoshop,linux,
@@ -13,7 +11,6 @@ linkedin
 
 import ListIcons from "../components/ListIcons.astro";
 import Proyects from "../components/Proyects.astro";
-import { Form } from "react-router-dom";
 ---
 
 <Layout title="Portafolio">
@@ -21,10 +18,10 @@ import { Form } from "react-router-dom";
   <!-- Navbar -->
   <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md left-0 w-full">
     <Link name="Inicio" link="#home" />
-    <Link name="Sobre mí" link="#aboutMe" />
+    <!--<Link name="Sobre mí" link="#aboutMe" />-->
     <Link name="Tecnologías" link="#tecnologias" />
     <Link name="Proyectos" link="#proyectos" />
-    <Link name="Es" link="/portafolio-web/es" />
+    <Link name="En" link="/portafolio-web/" />
   </nav>
 
   <!-- Main -->
@@ -66,6 +63,7 @@ import { Form } from "react-router-dom";
   </main>
 
   <!-- Sobre Mí -->
+  <!--
   <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="aboutMe">
     <h1 class="text-2xl text-yellow-500">Sobre mí</h1>
     <div class="flex flex-row mt-12">
@@ -79,6 +77,7 @@ import { Form } from "react-router-dom";
       </div>
     </div>
   </section>
+-->
 
   <!-- Tecnologías -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="tecnologias">
