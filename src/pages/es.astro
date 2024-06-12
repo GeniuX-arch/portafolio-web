@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/link.astro";
+import cves from "../assets/cv/cv-es.pdf";
+import cven from "../assets/cv/cv-en.pdf";
 import { Image } from 'astro:assets';
 import { javascript,typescript,java,php,astro,react,tailwindcss,Express,
   nodejs,prisma,laravel,mysql,mongodb, docker,aws,git,github,postman,vite,photoshop,linux,
@@ -11,65 +13,64 @@ linkedin
 
 import ListIcons from "../components/ListIcons.astro";
 import Proyects from "../components/Proyects.astro";
+import { Form } from "react-router-dom";
 ---
 
 <Layout title="Portafolio">
-  <!-- Barra de navegación -->
+
+  <!-- Navbar -->
   <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md left-0 w-full">
-    <Link name="Inicio" link="#" />
-    <Link name="Sobre mí" link="#" />
-    <Link name="Tecnologías" link="#" />
-    <Link name="Experiencias" link="#" />
-    <Link name="Es" link="/es" />
+    <Link name="Inicio" link="#home" />
+    <Link name="Sobre mí" link="#aboutMe" />
+    <Link name="Tecnologías" link="#tecnologias" />
+    <Link name="Proyectos" link="#proyectos" />
+    <Link name="Es" link="/portafolio-web/es" />
   </nav>
 
-  <!-- Principal -->
-  <main class="flex justify-center pt-16 items-center flex-col min-h-screen -slate-100 ">
-    
-  <!-- Imagen -->
-    <div class="w-full h-80 flex justify-center items-center aspect-square bg-hite">
-      <Image src={img} alt="Foto" class="rounded-full sm:w-1/4 w-2/3 "  />
+  <!-- Main -->
+  <main class="flex justify-center pt-16 items-center flex-col min-h-screen " id="home">
+    <!-- Imagen -->
+    <div class="w-full h-80 flex justify-center items-center aspect-square ">
+      <Image src={img} alt="Foto" class="rounded-full sm:w-1/4 w-2/3" />
     </div>
-    <div class="flex flex-col items-center justify-center text-center  w-full">
-        <p>¡Hola! Soy</p>
-        <h1 class="text-5xl">Jhoan Jimenez</h1>
-        <p class="text-2xl text-yellow-500">Desarrollador Full Stack</p>
-        <p>¿En qué puedo ayudarte?</p>
+    <div class="flex flex-col items-center pt-6 justify-center text-center w-full">
+      <p>¡Hola! Soy</p>
+      <h1 class="text-5xl">Jhoan Jimenez</h1>
+      <p class="text-2xl text-yellow-500">Desarrollador Full Stack</p>
+      <p>¿Cómo puedo ayudarte?</p>
 
-        <!-- Botones -->
-        <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
-          <a href="#" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg">
-            CV (Español)
-          </a>
-          <a href="#" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
-            CV (Inglés)
-          </a>
+      <!-- Botones -->
+      <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
+        
+        <a href="/portafolio-web/cv/es.pdf" target="_blank" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
+  CV (Español)
+</a>
+<a href="/portafolio-web/cv/en.pdf" target="_blank" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
+  CV (Inglés)
+</a>
+      </div>
 
-          <!-- Correo electrónico -->
-         
-        </div>
-
-        <!-- Contacto -->
-        <ul class="flex flex-row items-center justify-center w-full flex-wrap">
-          <a href="https://www.linkedin.com/in/jhoanjimenez">
-            <Icons name="LinkedIn" link={linkedin} hover="" width={30} />
-          </a>
-          <a href="https://github.com/GeniuX-arch">
-            <Icons name="GitHub" link={github} hover="" width={30} />
-          </a>
-          <a href="#">
-            <Icons name="geniuh7@gmail.com" link={email} hover="Copiar" width={30} />
-          </a>
-        </ul>
+      <!-- Contacto -->
+      <ul class="flex flex-row items-center justify-center w-full flex-wrap">
+        <a href="https://www.linkedin.com/in/jhoanjimenez">
+          <Icons name="LinkedIn" link={linkedin} hover="" width={30} />
+        </a>
+        <a href="https://github.com/GeniuX-arch">
+          <Icons name="GitHub" link={github} hover="" width={30} />
+        </a>
+        <a href="#">
+          <Icons name="geniuh7@gmail.com" link={email} hover="Copiar" width={30} />
+        </a>
+      </ul>
     </div>
   </main>
 
-  <!-- Sobre mí -->
-   <section class="text-center my-20 min-h-screen flex flex-col justify-center">
+  <!-- Sobre Mí -->
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="aboutMe">
     <h1 class="text-2xl text-yellow-500">Sobre mí</h1>
     <div class="flex flex-row mt-12">
-       <div class="w-1/2">
-        <p>Desde muy joven, me ha apasionado la programación, gracias a lo cual he aprendido muchas cosas que podrían serte de gran utilidad.</p>
+      <div class="w-1/2">
+        <p>Desde muy joven, me ha encantado la programación, gracias a la cual he aprendido muchas cosas que podrían ser de gran utilidad para ti.</p>
       </div>
       <div class="flex flex-row flex-wrap h-12 w-1/2">
         <div class="flex flex-col w-2/12 m-3">
@@ -80,7 +81,7 @@ import Proyects from "../components/Proyects.astro";
   </section>
 
   <!-- Tecnologías -->
-  <section class="text-center my-20 min-h-screen flex flex-col justify-center">
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="tecnologias">
     <h1 class="text-4xl text-yellow-500">Tecnologías que conozco</h1>
     <div class="flex flex-col mt-12">
       <div class="flex flex-row items-center mt-10">
@@ -105,17 +106,17 @@ import Proyects from "../components/Proyects.astro";
       </div>
     </div>
   </section>
-    <!-- PROYECTOS -->
-  <section class="text-center my-20 min-h-screen flex flex-col justify-center">
-    <h1 class="text-2xl text-yellow-500">Proyectos</h1>
-    <div class="lg:grid-cols-2 grid gap-2 my-10 grid-cols-1">
-      <Proyects titulo="Administración de horarios frontend" img={proyecto1} tecnologias={[git, github, react, vite, tailwindcss, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
-<Proyects titulo="Administración de horarios backend" img={proyecto2} tecnologias={[git, github, nodejs, Express, postman, mysql, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. De las Unidades Tecnologicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
-<Proyects titulo="Administración de Tareas frontend" img={proyecto3} tecnologias={[git, github, react, vite, tailwindcss, javascript]} des="Pagina para Organizarse con las tareas del día a día" extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />
-<Proyects titulo="Crud con PHP" img={proyecto4} tecnologias={[git, github, php, tailwindcss, mysql]} des="Crud: Crear, Leer, Actualizar y Eliminar de una base de datos, Tiene validación de campos y redirecciones" extra="https://github.com/GeniuX-arch/crud-php" />
 
+  <!-- Proyectos -->
+  <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="proyectos">
+    <h1 class="text-2xl text-yellow-500">Proyectos</h1>
+    <div class="lg:grid-cols-2 grid gap-5 my-10 grid-cols-1">
+      <Proyects titulo="Administración de horarios frontend" img={proyecto1} tecnologias={[git, github, react, vite, tailwindcss, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. de las Unidades Tecnológicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
+      <Proyects titulo="Administración de horarios backend" img={proyecto2} tecnologias={[git, github, nodejs, Express, postman, mysql, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. de las Unidades Tecnológicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
+      <Proyects titulo="Administración de Tareas frontend" img={proyecto3} tecnologias={[git, github, react, vite, tailwindcss, javascript]} des="Página para organizarse con las tareas del día a día" extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />
+      <Proyects titulo="Crud con PHP" img={proyecto4} tecnologias={[git, github, php, tailwindcss, mysql]} des="CRUD: Crear, Leer, Actualizar y Eliminar de una base de datos. Tiene validación de campos y redirecciones" extra="https://github.com/GeniuX-arch/crud-php" />
     </div>
-    <p>Te invito a mi repositorio de github para que puedas ver muchisimos mas:</p> 
+    <p>Te invito a mi repositorio de GitHub para que puedas ver muchos más:</p> 
     <a href="https://github.com/GeniuX-arch">
       <Icons name="Ver repositorio de GitHub" link={github} hover="" width={30} />
     </a>
@@ -123,3 +124,39 @@ import Proyects from "../components/Proyects.astro";
 </Layout>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollToElement = (element, duration) => {
+      const start = window.scrollY;
+      const end = element.getBoundingClientRect().top;
+      const startTime = performance.now();
+
+      const easeInOutCubic = (t) => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
+
+      const animateScroll = (currentTime) => {
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+        window.scrollTo(0, start + end * ease);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+
+      requestAnimationFrame(animateScroll);
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          scrollToElement(target, 1000); // 1000 ms = 1 segundo
+        }
+      });
+    });
+  });
+</script>
