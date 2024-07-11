@@ -1,20 +1,24 @@
 ---
-import Icons from "./Icons.astro"
+import Icons from "./Icons.astro";
 import Image from "astro/components/Image.astro";
 
 interface Props {
   list: ImageMetadata[];
   width: number;
+  name?: string[];
 }
 
-const { list,width } = Astro.props;
+const { list, width, name } = Astro.props;
 ---
 
-
-    <ul class="flex flex-row justify-center w-10/12 flex-wrap">
-        {
-        list.map((name)=>
-            <Icons hover="" link={name} name="" width={width}/>
-        )
-        }
-    </ul>
+<ul class="flex flex-row justify-center w-10/12 flex-wrap">
+  {list.map((ico, index) => (
+    <>
+      {name && name[index] ? (
+        <Icons hover="" link={ico} name={name[index]} width={width} flex="flex-col" />
+      ) : (
+        <Icons hover="" link={ico} name="" width={width} flex="flex-col" />
+      )}
+    </>
+  ))}
+</ul>

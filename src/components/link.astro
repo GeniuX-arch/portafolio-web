@@ -1,13 +1,24 @@
 ---
+import { Image } from 'astro:assets';
 interface Props {
   name: string;
   link: string;
+  img?: ImageMetadata;
+
 }
 
-const { name, link } = Astro.props;
+const { name, link,img } = Astro.props;
 ---
 
 
-  <div class="h-20 text-center mx-4 sm:mx-10 hover:text-purple-500 transition duration-150">
-      <a href={link} class="h-full  flex justify-center items-center w-full">{name}</a>
+  <div class="flex justify-center flex-row items-center h-20 text-center mx-4 sm:mx-10 hover:text-purple-500 transition duration-150">
+
+      <a href={link} class="h-full  flex justify-center items-center w-full">{name}
+  {img && (
+      <Image src={img} alt="iconos" width={20} class='m-2'/>
+    )}
+      </a>
+
+      
+      
   </div>

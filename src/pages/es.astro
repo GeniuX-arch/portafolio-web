@@ -3,72 +3,68 @@ import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/link.astro";
 import { Image } from 'astro:assets';
-import { javascript,typescript,java,php,astro,react,tailwindcss,Express,
-  nodejs,prisma,laravel,mysql,mongodb, docker,aws,git,github,postman,vite,photoshop,linux,
-  proyecto1,proyecto2,proyecto3,proyecto4,img,email,
-linkedin
- } from "../assets/lista.js";
+import { javascript, typescript, java, php, astro, react, tailwindcss, Express,
+  nodejs, prisma, laravel, mysql, mongodb, docker, aws, git, github, postman, vite, photoshop, linux,
+  proyecto1, proyecto2, proyecto3, proyecto4, email,
+linkedin, American, Spain, vue, firebase
+} from "../assets/lista.js";
 
 import ListIcons from "../components/ListIcons.astro";
 import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Portafolio">
-
-  <!-- Navbar -->
-  <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md left-0 w-full">
+  <!-- Barra de navegación -->
+  <nav class="flex justify-center h-14 items-center fixed backdrop-filter backdrop-blur-md left-0 w-full" >
     <Link name="Inicio" link="#home" />
-    <!--<Link name="Sobre mí" link="#aboutMe" />-->
+    <!-- <Link name="Sobre mí" link="#aboutMe" />-->
     <Link name="Tecnologías" link="#tecnologias" />
-    <Link name="Proyects" link="#proyectos" />
-    <Link name="En" link="/portafolio-web/" />
+    <Link name="Proyectos" link="#proyectos" />
+    <Link name="Es" link="/portafolio-web" img={Spain} /> 
   </nav>
 
-  <!-- Main -->
-  <main class="flex justify-center pt-16 items-center flex-col min-h-screen " id="home">
-    <!-- Imagen -->
-    <div class="w-full h-80 flex justify-center items-center aspect-square ">
-      <Image src={img} alt="Foto" class="rounded-full sm:w-1/4 w-2/3" />
+  <!-- Principal -->
+  <main class='flex flex-col mb-10 text-xl justify-center items-center min-h-screen' id="home">
+    <div class='text-center mt-16 text-9xl font-BadScript m-20 flex flex-row'>
+      <div class='rounded-full bg-purple-800 py-10 px-5'>G</div>
+      <div class='py-10'>eniuX</div>
+    </div>
+
+    <p class='font-Manrope text-center'>Tu <span class='text-yellow-300'>desarrollador web</span> de <span class='text-yellow-300'>confianza</span></p>
+    <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
+      <a target="_blank" href="/portafolio-web/cv/es.pdf" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 duration-150 transition text-center rounded-lg">
+        CV (Español)
+      </a>
+      <a target="_blank" href="/portafolio-web/cv/es.pdf" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
+        CV (Inglés)
+      </a>
+
     </div>
     <div class="flex flex-col items-center pt-6 justify-center text-center w-full">
-      <p>¡Hola! Soy</p>
-      <h1 class="text-5xl">Jhoan Jimenez</h1>
-      <p class="text-2xl text-yellow-500">Desarrollador Full Stack</p>
-      <p>¿Cómo puedo ayudarte?</p>
-
       <!-- Botones -->
-      <div class="flex flex-row items-center justify-center sm:items-start sm:justify-normal">
-        
-        <a href="/portafolio-web/cv/es.pdf" target="_blank" class="mr-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
-  CV (Español)
-</a>
-<a href="/portafolio-web/cv/en.pdf" target="_blank" class="ml-4 my-4 px-12 py-2.5 bg-violet-800 hover:bg-violet-600 transition duration-150 text-center rounded-lg">
-  CV (Inglés)
-</a>
-      </div>
 
       <!-- Contacto -->
       <ul class="flex flex-row items-center justify-center w-full flex-wrap">
-        <a href="https://www.linkedin.com/in/jhoanjimenez">
-          <Icons name="LinkedIn" link={linkedin} hover="" width={30} />
+        <a target="_blank" href="https://www.linkedin.com/in/jhoanjimenez">
+          <Icons name="LinkedIn" link={linkedin} hover="" width={30} flex="flex-row" />
         </a>
-        <a href="https://github.com/GeniuX-arch">
-          <Icons name="GitHub" link={github} hover="" width={30} />
+        <a target="_blank" href="https://github.com/GeniuX-arch">
+          <Icons name="GitHub" link={github} hover="" width={30} flex="flex-row" />
         </a>
-        <a href="#">
-          <Icons name="geniuh7@gmail.com" link={email} hover="Copiar" width={30} />
+        <a target="_blank" href="#">
+          <Icons name="geniuh7@gmail.com" link={email} hover="Copiar" width={30} flex="flex-row" />
         </a>
       </ul>
     </div>
   </main>
 
-  <!-- Sobre Mí -->
+  <!-- Sobre mí -->
   <!--
   <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="aboutMe">
-    <h1 class="text-2xl text-yellow-500">Sobre mí</h1>
+    <h1 class="text-2xl text-yellow-300">Sobre mí</h1>
     <div class="flex flex-row mt-12">
       <div class="w-1/2">
-        <p>Desde muy joven, me ha encantado la programación, gracias a la cual he aprendido muchas cosas que podrían ser de gran utilidad para ti.</p>
+        <p>Desde muy joven, me ha encantado programar, gracias a lo cual he aprendido muchas cosas que podrían ser de gran utilidad para ti.</p>
       </div>
       <div class="flex flex-row flex-wrap h-12 w-1/2">
         <div class="flex flex-col w-2/12 m-3">
@@ -77,52 +73,50 @@ import Proyects from "../components/Proyects.astro";
       </div>
     </div>
   </section>
--->
-
+  -->
   <!-- Tecnologías -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="tecnologias">
-    <h1 class="text-4xl text-yellow-500">Tecnologías que conozco</h1>
+    <h1 class="text-4xl text-yellow-300">Tecnologías que sé usar</h1>
     <div class="flex flex-col mt-12">
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">Lenguajes de programación</h2>
-        <ListIcons list={[javascript, typescript, java, php]} width={30} />
+        <ListIcons list={[javascript, typescript, java, php]} name={['JavaScript', 'TypeScript', 'Java', 'PHP']} width={30} />
       </div>
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">FrontEnd</h2>
-        <ListIcons list={[astro, react, tailwindcss]} width={30} />
+        <ListIcons list={[astro, react, tailwindcss, vue]} name={['Astro', 'React', 'TailwindCSS', 'Vue']} width={30} />
       </div>
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">BackEnd</h2>
-        <ListIcons list={[Express, nodejs, prisma, laravel]} width={30} />
+        <ListIcons list={[Express, nodejs, prisma, laravel]} name={['Express', 'Node.js', 'Prisma', 'Laravel']} width={30} />
       </div>
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">Bases de Datos</h2>
-        <ListIcons list={[mysql, mongodb]} width={30} />
+        <ListIcons list={[mysql, mongodb]} name={['MySQL', 'MongoDB']} width={30} />
       </div>
       <div class="flex flex-row items-center mt-10">
         <h2 class="w-3/12">Otras Tecnologías</h2>
-        <ListIcons list={[docker, aws, git, github, postman, vite, photoshop, linux]} width={30} />
+        <ListIcons list={[docker, aws, git, github, postman, vite, photoshop, linux, firebase]} name={['Docker', 'AWS', 'Git', 'GitHub', 'Postman', 'Vite', 'Photoshop', 'Linux', 'Firebase']} width={30} />
       </div>
     </div>
   </section>
 
   <!-- Proyectos -->
   <section class="text-center my-20 min-h-screen flex flex-col justify-center" id="proyectos">
-    <h1 class="text-2xl text-yellow-500">Proyectos</h1>
+    <h1 class="text-4xl text-yellow-300">Proyectos</h1>
     <div class="lg:grid-cols-2 grid gap-5 my-10 grid-cols-1">
-      <Proyects titulo="Administración de horarios frontend" img={proyecto1} tecnologias={[git, github, react, vite, tailwindcss, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. de las Unidades Tecnológicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
-      <Proyects titulo="Administración de horarios backend" img={proyecto2} tecnologias={[git, github, nodejs, Express, postman, mysql, typescript]} des="Proyecto necesario para la administración de horarios, usuarios, etc. de las Unidades Tecnológicas de Santander" extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
-      <Proyects titulo="Administración de Tareas frontend" img={proyecto3} tecnologias={[git, github, react, vite, tailwindcss, javascript]} des="Página para organizarse con las tareas del día a día" extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />
-      <Proyects titulo="Crud con PHP" img={proyecto4} tecnologias={[git, github, php, tailwindcss, mysql]} des="CRUD: Crear, Leer, Actualizar y Eliminar de una base de datos. Tiene validación de campos y redirecciones" extra="https://github.com/GeniuX-arch/crud-php" />
+      <Proyects habilidades={["Arrastrar y Soltar", "Inicio de sesión", "Rutas seguras", "Gestión de estados"]} titulo="Administración de horarios Front-end Beta | 2024" img={proyecto1} tecnologias={[git, github, react, vite, tailwindcss, typescript, firebase]} des="Proyecto Front-end con el objetivo de facilitar la creación de horarios para las clases de las Unidades Tecnológicas de Santander." extra="https://github.com/GeniuX-arch/proyecto-grado-frontend" />
+      <Proyects habilidades={["Manejo de los ORMs de laravel y nodejs", "Diseño de base de datos", "Creación de APIs"]} titulo="Administración de horarios Back-end Beta | 2024" img={proyecto2} tecnologias={[git, github, nodejs, Express, postman, mysql, typescript]} des="Proyecto Back-end necesario para la administración de horarios, clases, etc., de las Unidades Tecnológicas de Santander." extra="https://github.com/GeniuX-arch/proyecto-grado-backend" />
+      <Proyects habilidades={["Gestión de estados", "Rutas seguras", "Manejo de Validaciones"]} titulo="Administración de Tareas Front-end | 2023" img={proyecto3} tecnologias={[git, github, react, vite, tailwindcss, javascript]} des="Página para organizar las tareas del día a día." extra="https://github.com/GeniuX-arch/paginaweb-administrativa" />
+      <Proyects habilidades={["Implementación de CRUD", "Manejo de Validaciones", "Uso correcto de formularios", "Diseño", "Creación de APIs"]} titulo="Crud con PHP | 2022" img={proyecto4} tecnologias={[git, github, php, tailwindcss, mysql]} des="CRUD: Crear, Leer, Actualizar y Eliminar de una base de datos. Tiene validación de campos y redirecciones." extra="https://github.com/GeniuX-arch/crud-php" />
     </div>
-    <p>Te invito a mi repositorio de GitHub para que puedas ver muchos más:</p> 
-    <a href="https://github.com/GeniuX-arch">
-      <Icons name="Ver repositorio de GitHub" link={github} hover="" width={30} />
-    </a>
   </section>
 </Layout>
 
-
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+</style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const scrollToElement = (element, duration) => {

@@ -5,14 +5,15 @@ interface Props {
   name: string;
   link: ImageMetadata;
   width:number;
+  flex:string;
 }
 
-const { name, link, hover, width } = Astro.props;
+const { name, link, hover, width,flex } = Astro.props;
 ---
 
 <li>
-  <div class="group mr-4 my-4 text-center flex flex-row items-center hover:text-yellow-400 justify-center h-10" title={hover}>
-    <Image src={link} alt="iconos"  class="m-2  group-hover:rotate-6 transition duration-150 h-full" width={width} />
+  <div class=`group mr-4 my-4 text-center flex  items-center hover:text-yellow-400 justify-center h-min ${flex}` title={hover}>
+    <Image src={link} alt="iconos"  class="m-2  group-hover:rotate-6 transition duration-150 h-10" width={width}  />
     <p>{name}</p>
   </div>
 </li>

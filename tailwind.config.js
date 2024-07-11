@@ -3,6 +3,11 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily:{
+        BadScript:[ 'Bad Script'],
+        Manrope:['Manrope', 'sans-serif']
+        
+      },
       colors: {
         'purple-dark': '#8874CC', // Reemplaza con tu código de color personalizado
         'purple-light': '#4100CC', // Reemplaza con tu código de color personalizado

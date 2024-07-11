@@ -11,26 +11,35 @@ interface Props{
     img:ImageMetadata;
     des:string;
     tecnologias:ImageMetadata[];
+    habilidades: string[];
     extra:string;
     
 }
-const {titulo, img, des, tecnologias, extra} = Astro.props;
+const {titulo, img, des, tecnologias, extra, habilidades} = Astro.props;
 ---
 
 <!-- proyectos -->
-<div class="w-full flex flex-col justify-center items-center rounded-md bg-slate-950 ">
-    <div class="w-full m-2 text-2xl">
-        <p>{titulo}</p>
+<div class="w-full flex flex-col  items-center rounded-md bg-slate-900 ">
+    <div class="w-full m-2 text-2xl h-14 text-center">
+        <p class="text-yellow-300">{titulo}</p>
     </div>
     <div class="w-full h-auto -white">
         <Image src={img} alt="">
     </div>
-        <ListIcons list={tecnologias} width={20}/>
-    <div class="w-full">
+        <ListIcons list={tecnologias} width={20} />
+    <div class="w-10/12">
         <p>{des}</p>
+        <div class="flex flex-col mt-6">
+    <h2 class="text-yellow-300 text-xl">Habilidades a Destacar:</h2>
+    <ul class="ml-3">
+        {habilidades.map(name=>(
+            <li>-{name}</li>
+        ))}
+    </ul>
+</div>
         <ul>
-            <a href={extra} >
-                <Icons name="Ver codigo" link={github} hover="" width={20}/>
+            <a target="_blank"href={extra} >
+                <Icons name="Ver codigo" link={github} hover="" width={20} flex="flex-row"/>
             </a>
         </ul>
     </div>

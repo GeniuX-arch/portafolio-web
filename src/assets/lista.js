@@ -23,11 +23,14 @@ import react from "./tecnologies/react.svg"
 import tailwindcss from "./tecnologies/tailwindcss.svg"
 import typescript from "./tecnologies/typescript.svg"
 import vite from "./tecnologies/vitejs.svg"
-import img from "./media/img.png"
+import vue from "./tecnologies/vue.svg"
+import firebase from "./tecnologies/firebase.svg"
 import proyecto1 from "./media/proyecto1.png"
 import proyecto2 from "./media/proyecto2.png"
 import proyecto3 from "./media/proyecto3.png"
 import proyecto4 from "./media/proyecto4.png"
+import American from "./media/American.png"
+import Spain from "./media/Spain.png"
 export {email, linkedin,gmail,git,github,favicon,astro, aws, docker,Express,java,javascript,linux,laravel,mongodb,mysql,nodejs,photoshop,php,postman,
-    prisma,react,tailwindcss,typescript
-,vite,img,proyecto1,proyecto2,proyecto3,proyecto4}
+    prisma,react,tailwindcss,typescript, vue, firebase,
+vite,proyecto1,proyecto2,proyecto3,proyecto4,American,Spain}
