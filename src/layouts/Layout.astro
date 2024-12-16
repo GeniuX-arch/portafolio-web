@@ -6,67 +6,142 @@ interface Props {
 const { title } = Astro.props;
 
 import Icons from "../components/Icons.astro";
-import { 
-  github,email,linkedin
- } from "../assets/lista.js";
+import { github, email, linkedin } from "../assets/lista.js";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/portafolio-web/logo.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body class="bg-slate-950">
-    <div class="text-white mx-5 sm:text-base text-xs  sm:mx-10 lg:mx-32 xl:mx-60  ">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="A portfolio website showcasing skills, services, and projects by GeniuX" />
+  <meta name="keywords" content="GeniuX, web development, portfolio, software development, programming, technology" />
+  <meta name="author" content="GeniuX" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content="A portfolio website showcasing skills, services, and projects by GeniuX" />
+  <meta property="og:image" content="/portafolio-web/logo.png" />
+  <meta property="og:url" content="https://your-portfolio-url.com" />
+  <link rel="icon" type="image/png" href="/portafolio-web/logo.png" />
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+</head>
+
+<body class="">
+
+  <!-- Navigation Bar -->
+<nav id="navbar" class="bg-transparent h-24 flex flex-row justify-center w-full items-center gap-6 fixed top-0 left-0 transition-all text-white z-50">
+    <!-- Logo and Branding -->
+    <div class="text-center text-4xl font-BadScript m-20 flex items-center justify-center">
+        <div class="py-3">GeniuX</div>
+    </div>
+
+    <a class="text-xl font-semibold text-center flex items-center hover:text-gray-700 transition-all" href="about">Sobre mi</a>
+    <a class="text-xl font-semibold text-center flex items-center hover:text-gray-700 transition-all" href="trabajos">Trabajos</a>
+    <a class="text-xl font-semibold text-center flex items-center hover:text-gray-700 transition-all" href="servicios">Servicios</a>
+    <a class="text-xl font-semibold text-center flex items-center hover:text-gray-700 transition-all" href="metodologia">Metodologías</a>
+</nav>
+
+  <!-- Main Content -->
+  <div class=" ">
     <slot />
-    </div>
-<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4 text-white">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
+  </div>
 
-      <div class='text-center mt-16 text-4xl font-BadScript m-20 flex flex-row'>
-        <div class='rounded-full bg-purple-800 py-3 px-1'>G</div>
-        <div class='py-3'>eniuX</div>
-      </div>
-            
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
- 
-          
-          
-                <li>
-                  <a target="_blank" href="https://www.linkedin.com/in/jhoanjimenez">
-            <Icons name="Linkerdin" link={linkedin} hover="" width={30} flex="flex-row" />
-          </a>
-                </li>
-                <li>
-<a target="_blank"href="https://github.com/GeniuX-arch">
-            <Icons name="GitHub" link={github} hover=""width={30} flex="flex-row" />
-          </a>
-                </li>
-                <li>
-<a target="_blank"href="#">
-            <Icons name="geniuh7@gmail.com" link={email} hover="Copiar" width={30} flex="flex-row" />
-          </a>
-                </li>
-                <li>
-                  +57 312 3015191
-                </li>
-            </ul>
+  <!-- Footer -->
+  <footer class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white rounded-lg shadow-xl p-6 mt-4">
+    <div class="w-full max-w-screen-xl mx-auto py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+
+        <!-- Logo and Branding -->
+        <div class="text-center mt-16 text-4xl font-BadScript m-20 flex items-center justify-center">
+          <div class="py-3">GeniuX</div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> 2024 <a href="#" class="hover:underline">GeniuX</a> </span>
+
+        <!-- Social Links -->
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/jhoanjimenez">
+              <Icons name="Linkerdin" link={linkedin} hover="LinkedIn Profile" width={30} flex="flex-row"  />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/GeniuX-arch">
+              <Icons name="Github" link={github} hover="GitHub Profile" width={30} flex="flex-row"/>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:geniuh7@gmail.com">
+              <Icons name="email" link={email} hover="Send Email" width={30} flex="flex-row"/>
+            </a>
+          </li>
+          <li>
+            <span>+57 312 3015191</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+
+      <!-- Footer Text -->
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        2024 <a href="#" class="hover:underline">GeniuX</a>
+      </span>
     </div>
-</footer>
+  </footer>
+
+</body>
+<script type="module">
+  let lastScrollTop = 0; // Store the last scroll position
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Hide the navbar when scrolling down
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      navbar.style.transform = 'translateY(-100%)';  // Move navbar up (hide)
+    } else if (currentScroll < lastScrollTop) {
+      navbar.style.transform = 'translateY(0)';  // Show navbar
+    }
+
+    // Change background color based on scroll
+    console.log(currentScroll)
+    if (currentScroll > 30) {
+      navbar.classList.add('bg-black');  // Add black background when scrolled down
+      navbar.classList.remove('bg-transparent');  // Remove black background when at the top
+    } else {
+      navbar.classList.remove('bg-black');  // Remove black background when at the top
+      navbar.classList.add('bg-transparent');  // Add black background when scrolled down
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative scroll
+  });
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 
-  </body>
+
+</style>
+
 </html>
+
 <style is:global>
+
+  #navbar {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bg-black {
+  background-color: black !important;  /* Add black background */
+}
+
+.bg-transparent {
+  background-color: transparent !important;  /* Transparent background by default */
+}
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
@@ -78,46 +153,39 @@ import {
       white 60%
     );
   }
-::-webkit-scrollbar {
-  width: 12px;
-}
 
-::-webkit-scrollbar-thumb {
-  background-color:#4C1D95; /* Reemplaza bg-purple-600 con el valor hexadecimal del color */
-  
-  
-  border-radius: 6px;
-}
+  /* Custom Scrollbar */
 
-::-webkit-scrollbar-track {
-  background-color: #212021;
-}
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
 
-/* Personalización de la barra de desplazamiento para Mozilla (Firefox) */
-html {
-  scrollbar-color: #4C1D95 #212021; /* Reemplaza bg-purple-600 con el valor hexadecimal del color */
-  scrollbar-width: thin;
-}
-                
-/* Personalización de la barra de desplazamiento para Microsoft Edge */
-body {
-  scrollbar-color: #4C1D95 #F3F4F6; /* Reemplaza bg-purple-600 con el valor hexadecimal del color */
-  scrollbar-width: thin;
+  ::-webkit-scrollbar-thumb {
+    background-color: #4C1D95;
+    border-radius: 6px;
+  }
 
-}
+  ::-webkit-scrollbar-track {
+    background-color: #212021;
+  }
+
   html {
-    font-family: system-ui, sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     background-size: 224px;
   }
+
   code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 640px) {
+    .text-lg {
+      font-size: 1rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
   }
 </style>
